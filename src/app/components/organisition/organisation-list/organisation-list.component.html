@@ -5,7 +5,7 @@
         <mat-icon >widgets</mat-icon>
         Neu
       </button>
-      
+
 
     </div>
       <h2 class="table-title">Organisationseinheiten</h2>
@@ -22,12 +22,12 @@
             [(ngModel)]="searchTerm"
             (keyup)="applyFilter()"
             class="search-input"
-            
+
           />
           <mat-icon>search</mat-icon>
         </div>
 
-     
+
     </div>
   </div>
 
@@ -65,8 +65,8 @@
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row 
-        *matRowDef="let row; columns: displayedColumns" 
+      <mat-row
+        *matRowDef="let row; columns: displayedColumns"
         (click)="selectRow(row)"
         [class.selected-row]="selectedRows.includes(row)"
           [ngClass]="{ 'deleted-row': row.deleted }"
