@@ -1,0 +1,212 @@
+<div class="form-container">
+  <!-- الشريط العلوي (الهيدر) - يبقى كما هو -->
+  <div class="form-header">
+    <div class="form-toolbar">
+      <div class="flex-gap">
+        <button type="button" class="cancel-btn" (click)="onCancel()">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button
+          *ngIf="isFormEditable"
+          type="button"
+          class="cancel-btn"
+          (click)="onCancel()"
+          [disabled]="saving"
+        >
+          <mat-icon>close</mat-icon>
+          Abbrechen
+        </button>
+      </div>
+      <h2 class="form-title">Produkt bearbeiten</h2>
+      <div>
+        <button
+          type="button"
+          class="save-btn"
+          (click)="onEditOrSubmit()"
+          [disabled]="saving"
+        >
+          <mat-icon>{{ isFormEditable ? "check" : "edit" }}</mat-icon>
+          {{ isFormEditable ? "Speichern" : "Bearbeiten" }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-content" *ngIf="!loading">
+    <form [formGroup]="produktForm">
+      <div class="form-grid-container">
+        <!-- ///first group//// -->
+
+        <div class="form-column">
+          <div class="field-row">
+            <label class="field-label required">Produktname</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <input matInput formControlName="produktname" class="height" />
+            </mat-form-field>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label">Kurzname</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <input matInput formControlName="kurzName" class="height" />
+            </mat-form-field>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label">Produkttyp</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <mat-select formControlName="produktTyp" class="height">
+                <mat-option value="zentrale Komponente"
+                  >zentrale Komponente</mat-option
+                >
+                <mat-option value="anderer Typ">Anderer Typ</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label">Auftraggeber</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <mat-select formControlName="auftraggeber" class="height">
+                <mat-option value="Grossinger Walter"
+                  >Grossinger Walter</mat-option
+                >
+                <mat-option value="Musterfrau Erika"
+                  >Musterfrau Erika</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label">Ergebnisverantwortlicher</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <mat-select
+                formControlName="ergebnisverantwortlicher"
+                class="height"
+              >
+                <mat-option value="Föda Gerhard">Föda Gerhard</mat-option>
+                <mat-option value="Andere Person">Andere Person</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <!-- ///second group////// -->
+        <div class="form-column">
+          <div class="field-row checkbox-row">
+            <label class="field-label"></label>
+            <mat-checkbox formControlName="aktiv" class="flex-field"
+              >Aktiv</mat-checkbox
+            >
+          </div>
+
+          <div class="field-row">
+            <div class="date-pair-container">
+              <label class="field-label">Start/End</label>
+              <mat-form-field appearance="outline" class="flex-field with-icon">
+                <input
+                  matInput
+                  [matDatepicker]="startPicker"
+                   formControlName="start"
+                  placeholder="TT.DD.JJJJ"
+                  class="height input-with-icon"
+                    [disabled]="!isFormEditable"
+                />
+                <!-- <mat-icon class="custom-icon">event</mat-icon> -->
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="startPicker"
+                  class="custom-icon"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #startPicker></mat-datepicker>
+              </mat-form-field>
+
+              <!-- End Date -->
+                <!-- <label >Start/End</label> -->
+
+              <label class="field-label-bis">bis:</label>
+              <mat-form-field appearance="outline" class="flex-field with-icon">
+                <input
+                  matInput
+                     formControlName="ende"
+                  [matDatepicker]="endPicker"
+                  placeholder="TT.DD.JJJJ"
+                  class="height input-with-icon"
+                    [disabled]="!isFormEditable"
+                />
+                <!-- <mat-icon >event</mat-icon> -->
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="endPicker"
+                  class="custom-icon"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #endPicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label">Organisationseinheit</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <input
+                matInput
+                formControlName="auftraggeberOrganisation"
+                class="height"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label">Anmerkung</label>
+            <mat-form-field appearance="outline" class="flex-field">
+              <textarea
+                matInput
+                formControlName="anmerkung"
+                rows="2"
+              ></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Product Positions Section -->
+<div class="produktpositionen-container">
+  <div class="positionen-header custom-header">
+    <div class="header-center">
+      <span class="header-title">Produktpositionen</span>
+      <mat-icon class="header-icon" id="head-locat-icon">add_location_alt</mat-icon>
+    </div>
+    <div class="header-icons">
+      <button mat-icon-button>
+        <mat-icon>place</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>arrow_drop_up</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="positionen-list scrollable-container">
+    <div
+      class="position-item custom-item font"
+      *ngFor="let pos of produktpositionen"
+    >
+      <mat-icon class="position-icon" [ngClass]="pos.status">
+        {{ pos.status === "active" ? "location_on" : "location_on" }}
+      </mat-icon>
+      <div class="position-info">
+        <div class="position-title">{{ pos.name }}</div>
+        <div class="position-dates font" *ngIf="pos.start && pos.ende">
+          <mat-icon class="inline-icon colored-icon">sync</mat-icon>
+          Start: {{ pos.start | date : "dd.MM.yyyy" }} Ende:
+          {{ pos.ende | date : "dd.MM.yyyy" }}
+        </div>
+      </div>
+      <mat-icon class="sync-icon colored-icon">refresh</mat-icon>
+    </div>
+  </div>
+</div>

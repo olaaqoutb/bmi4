@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProjectFilterComponent } from './components/project-filter/project-filter.component';
 import { InfoBarComponent } from './components/info-bar/info-bar.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { InfoBarComponent } from './components/info-bar/info-bar.component';
     HeaderComponent,
     SidebarComponent,
     InfoBarComponent,
+    HttpClientModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

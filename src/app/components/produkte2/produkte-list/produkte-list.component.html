@@ -123,6 +123,7 @@
       mat-row
       *matRowDef="let row; columns: displayedColumns"
       [class.inactive-row]="!row.aktiv"
+      (click)="goToDetails(row)"
     ></tr>
   </table>
 </div>

@@ -1,0 +1,484 @@
+// الأنماط العامة للحاويات والهيدر والأزرار (تبقى كما هي)
+.form-container {
+  background: white;
+}
+.form-header {
+  padding: 10px 15px !important;
+  border-bottom: 1px solid #eee;
+  background-color: #338e9c;
+}
+.form-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .form-title {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .flex-gap {
+    display: flex;
+    gap: 10px;
+  }
+}
+button {
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+}
+.save-btn {
+  background: #2c3e50;
+  &:hover:not(:disabled) {
+    background: #3e5870;
+  }
+}
+.cancel-btn {
+   background: #2c3e50;
+  &:hover:not(:disabled) {
+    background: linear-gradient(to right, #3e5870, #4a5d78);
+  }
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// ----- أنماط التصميم الجديد -----
+
+.form-content {
+  padding: 2rem;
+}
+
+// 1. الحاوية الرئيسية للشبكة
+.form-grid-container {
+  display: flex;
+  gap: 3rem; // المسافة بين العمود الأيسر والأيمن
+}
+
+// 2. تصميم الأعمدة
+.form-column {
+  flex: 1; // كل عمود يأخذ نصف المساحة المتاحة
+  display: flex;
+  flex-direction: column;
+  gap: 16px; // المسافة بين الحقول داخل العمود الواحد
+}
+
+// 3. تصميم صف الحقل (Label + Input)
+.field-row {
+  display: flex;
+  align-items: center; // محاذاة رأسية للعنوان مع الحقل
+  gap: .5rem; // المسافة بين العنوان والحقل
+}
+
+// 4. تصميم العنوان (Label)
+.field-label {
+  width: 180px;
+  text-align: right;
+  font-weight: 500;
+  color: #333;
+  flex-shrink: 0; // يمنع العنوان من التقلص
+  position: relative;
+  top: 10px;
+
+  &.required::after {
+    content: " *";
+    color: #e74c3c;
+  }
+}
+
+.field-label-bis{
+  margin-top: 10px;
+  font-size: 15px;
+   color: #666666 !important;
+}
+.flex-field {
+  flex: 1; // الحقل يأخذ باقي المساحة المتاحة في الصف
+}
+
+// إزالة الحشو الزائد من حقول Material لجعلها أصغر
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+::ng-deep .mat-mdc-form-field-flex {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+
+// صف خاص للـ Checkbox للمحاذاة الصحيحة
+.checkbox-row {
+  // ارتفاع إضافي ليتناسب مع الحقول الأخرى
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+// فاصل بصري
+.section-divider {
+  margin: 2rem 0;
+}
+
+// قسم الحقول ذات العرض الكامل في الأسفل
+.full-width-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// قسم القائمة (كما هو)
+.positionen-container {
+  padding: 0 2rem 2rem 2rem;
+  background: white;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+// الأنماط العامة (بدون تغيير يذكر)
+.form-container { background: white; }
+.form-header {
+  padding: 10px 15px !important;
+  border-bottom: 1px solid #eee;
+  background-color: #338e9c;
+}
+.form-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .form-title { margin: 0; font-size: 20px; color: white; font-weight: bold; }
+  .flex-gap { display: flex; gap: 10px; }
+}
+button {
+  border-radius: 4px; font-size: 0.9rem; cursor: pointer; display: flex;
+  align-items: center; gap: 8px; padding: 8px 16px; color: white; border: none;
+}
+.save-btn { background: #2c3e50; &:hover:not(:disabled) { background: #3e5870; } }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+// ----- أنماط التصميم الجديد والمعدل -----
+
+.form-content {
+  padding: 2rem;
+}
+
+// 1. الحاوية الرئيسية للشبكة (تقليل العرض الأقصى)
+.form-grid-container {
+  display: flex;
+   justify-content: left;
+  gap: 3rem; // المسافة بين العمودين
+  max-width: 1200px; // تحديد عرض أقصى للنموذج
+  margin: 0 auto; // توسيط النموذج في الشاشات الكبيرة
+}
+
+// 2. تصميم الأعمدة
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+position: relative;
+right: 35px;
+  gap: 0px;
+  min-width: 0; // مهم لمنع الحقول من التمدد الزائد
+}
+
+// 3. تصميم صف الحقل (Label + Input)
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 430px;
+  height: 40px;
+
+}
+
+
+
+
+// 4. تصميم العنوان (Label)
+.field-label {
+  width: 160px;
+  text-align: right;
+  font-weight: 500;
+  color: #555;
+  flex-shrink: 0;
+
+  &.required::after {
+    content: " *";
+    color: #e74c3c;
+  }
+}
+
+// 5. تصميم الحقل نفسه (الذي يملأ المساحة)
+.flex-field {
+  flex: 1;
+  min-width: 0;
+
+}
+
+// **الجديد:** حاوية حقلي التاريخ
+.date-pair-container {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  min-width: 0;
+
+  // كل حقل تاريخ يأخذ نصف المساحة المتاحة له
+  mat-form-field {
+    flex: 1;
+  }
+}
+
+
+// **تعديل:** تقليل ارتفاع الحقول وحجم الخط
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none; // إخفاء المساحة السفلية للحقل
+   height:44px !important;
+}
+::ng-deep .mat-mdc-text-field-wrapper {
+  height: 27px !important; // تقليل ارتفاع الحقل بشكل واضح
+}
+::ng-deep .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+    top: 13px !important; // ضبط موضع العنوان العائم
+}
+::ng-deep .mat-mdc-form-field input,
+::ng-deep .mat-mdc-form-field .mat-mdc-select-value {
+    font-size: 0.8em !important;
+
+}
+// mat-mdc-select-value{
+//   outline: none !important;
+//    border-color: #3498db !important;
+//    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+// }
+//  input:focus,
+//  select:focus {
+//    outline: none;
+//    border-color: #3498db;
+//    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+//  }
+
+// صف خاص للـ Checkbox للمحاذاة الصحيحة
+.checkbox-row {
+  height: 40px; // جعل ارتفاعه يطابق الحقول الأخرى للمحاذاة
+  box-sizing: border-box;
+}
+
+
+// قسم القائمة (كما هو)
+.positionen-container {
+  padding: 0 2rem 2rem 2rem;
+  background: white;
+  h3 { font-size: 1.2rem; font-weight: 500; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+}
+
+
+.height{
+  height: 27px !important;
+
+
+}
+
+.height:focus{
+   outline: none !important;
+   border-color: #3498db !important;
+   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+}
+.with-icon {
+  position: relative;
+
+  .input-with-icon {
+    // padding-left: 32px !important;
+    padding-right: 10px !important;
+  }
+
+  .custom-icon {
+    position: absolute;
+    top: 6px;
+    right: 3px;
+  width: 35px;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+  cursor: not-allowed !important;
+    z-index: 20;
+  }
+
+}
+
+.input-with-icon::placeholder{
+  position: relative !important;
+  right: 5px!important;
+}
+// .filled-input{
+//    position: relative !important;
+//   right: 20px !important;
+// }
+::ng-deep .mat-datepicker-toggle[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+// ------------------------------------------------------
+
+.produktpositionen-container {
+  margin: 0 2rem 2rem 2rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  width: 50%;
+// overflow: scroll!important;
+.header-center{
+  display: flex;
+  // flex-direction: row;
+  // justify-content: center!important;
+  // align-items: center!important;
+}
+  .positionen-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 10px;
+    background-color:  #338e9c;
+    height: 35px!important;
+    border-radius: 4px;
+    color: white;
+
+    .header-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding-left: 10px;
+      color: #ffffff;
+    }
+
+    .header-icons {
+
+
+      button {
+        width: 32px;
+        height: 32px;
+        color: #555;
+      }
+    }
+  }
+
+  .positionen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-x: scroll!important;
+    height: 550px
+  }
+
+  .position-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+
+    .position-icon {
+      font-size: 20px !important;
+      position: relative;
+      bottom: 15px!important;
+      margin-right: 8px;
+
+      &.active {
+        color: green;
+      }
+
+      &.inactive {
+        color: darkred;
+      }
+    }
+
+    .position-info {
+      flex: 1;
+
+      .position-title {
+        font-weight: 500;
+        color: #333;
+       padding: 10px;
+      }
+
+      .position-dates {
+        font-size: 20px;
+        color: #666;
+        position: relative;
+        bottom: 9px;
+      }
+    }
+
+    .add-icon {
+      color: #555;
+    }
+  }
+}
+#head-locat-icon{
+  display: flex;
+   position: relative!important;
+   left: 230px !important;
+}
+.position-item{
+  height: 56px!important;
+}
+.font{
+  font-size: 15px!important;
+  color: darkred!important;
+}
+
+
+.scrollable-container {
+  max-height: 1500px!important;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-top: 8px;
+
+  /* Custom scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background:  #338e9c;
+    border-radius: 4px;
+  }
+}
+
+/* Date picker adjustments */
+.date-pair-container {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+
+  mat-form-field {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* Keep all your existing styles below */
+.form-container { background: white; }
+.form-header {
+  padding: 10px 15px !important;
+  border-bottom: 1px solid #eee;
+  background-color: #338e9c;
+}
+.colored-icon{
+  color: #304357;
+}

@@ -1,0 +1,607 @@
+{
+  "id": "2600000000008",
+  "version": 7,
+  "deleted": false,
+  "produktname": "Zentrales Melderegister",
+  "start": "2001-05-17T00:00:00.000",
+  "ende": "9999-12-31T00:00:00.000",
+  "aktiv": true,
+  "kurzName": "ZMR",
+  "auftraggeber": "Grossinger Walter",
+  "auftraggeberOrganisation": "III/a",
+  "ergebnisverantwortlicher": {
+    "id": "1500000000077",
+    "vorname": "Gerhard",
+    "nachname": "Föda",
+    "recht": [],
+    "funktion": [],
+    "vertrag": []
+  },
+  "produktTyp": "ZENTRALE_KOMPONENTE",
+  "produktPosition": [
+    {
+      "id": "2600000000583",
+      "version": 14,
+      "deleted": false,
+      "produktPositionname": "Betrieb",
+      "start": "2001-05-17T00:00:00.000",
+      "ende": "9999-12-31T00:00:00.000",
+      "aktiv": true,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000553",
+        "titel": "Mag.",
+        "vorname": "Radim",
+        "nachname": "Pavlicék",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "WARTUNG",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000000892",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_BMF-Transparenzdatenbank Kombi-Infobridge",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "2600000000894",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Deployment",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "2600000000896",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Kundenstammdatenbank und Verrechnungsapplikation neu",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "2600000000898",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_ZMR Pro und Info-Bridge NEU",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "2600000000900",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_ZMR-Änderungsdienst",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "2600000000980",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR-Wartung",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "14900000009132",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Relaunch",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "14900000009128",
+          "version": 2,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Relaunch - Modernisierung & Historientrennung",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "15000000008862",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_DIAZ",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "15000000008879",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Relaunch - Modernisierung Web-Service Schnittstelle",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "15000000008899",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Relaunch - SMI Umstellung auf Standard-Software",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "15000000008905",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_Relaunch - Worklow Optimierung (Shark Ausbau)",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "15000000008908",
+          "version": 1,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "ZMR_ZMR3",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "24700000004878",
+          "version": 1,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "AGS (Adress-, Gebäude- und Wohnungs-Service GWR neu)_V",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "24800000002115",
+          "version": 1,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "Migration von p auf z-enterprise",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "24800000002138",
+          "version": 1,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR_An- und Ab-Meldung mittels BKU_V",
+          "taetigkeitsbuchung": []
+        },
+        {
+          "id": "24800000002141",
+          "version": 1,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR_ZSZ_ZugangsService ZMR",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000585",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR Relaunch_Modernisierung Persistenz & Historientrennung",
+      "start": "2016-11-17T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001331",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR Relaunch_Modernisierung Persistenz & Historientrennung",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000587",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR Relaunch_Modernisierung Web-Service Schnittstelle",
+      "start": "2014-01-21T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001567",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR Relaunch_Modernisierung Web-Service Schnittstelle",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000589",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR Relaunch_P",
+      "start": "2016-11-17T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001371",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR Relaunch_P",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000591",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR Relaunch_Serverkonsolidierung",
+      "start": "2014-01-21T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001683",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR Relaunch_Serverkonsolidierung",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000593",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR Relaunch_SMI Umstellung auf Standard-Software",
+      "start": "2014-01-21T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001337",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR Relaunch_SMI Umstellung auf Standard-Software",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000595",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR Relaunch_Workflow Optimierung (Shark Ausbau)",
+      "start": "2014-01-21T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001323",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR Relaunch_Workflow Optimierung (Shark Ausbau)",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000597",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "ZMR_ZMR3_P",
+      "start": "2016-11-17T00:00:00.000",
+      "ende": "2018-11-15T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001333",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR_ZMR3_P",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000737",
+      "version": 3,
+      "deleted": false,
+      "produktPositionname": "AED_VVO",
+      "start": "2017-06-07T00:00:00.000",
+      "ende": "2017-09-30T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "KLEINPROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001283",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "AED_VVO",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "2600000000743",
+      "version": 4,
+      "deleted": false,
+      "produktPositionname": "PP_ZMR_ÄD_Sterbedaten",
+      "start": "2017-07-18T00:00:00.000",
+      "ende": "2017-12-31T00:00:00.000",
+      "aktiv": false,
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000579",
+        "titel": "Ing.",
+        "vorname": "Peter Franz",
+        "nachname": "Thiem",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "CHANGE_REQUEST",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "2600000001441",
+          "version": 2,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "PP_ZMR_ÄD_Sterbedaten",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "9900000006370",
+      "version": 5,
+      "deleted": false,
+      "produktPositionname": "LVR - Leistungsverrechnung",
+      "start": "2018-07-16T00:00:00.000",
+      "ende": "2019-04-30T00:00:00.000",
+      "aktiv": true,
+      "anmerkung": "Verspäteter Start - kein Geld",
+      "auftraggeber": "Blank Markus",
+      "auftraggeberOrganisation": "Abt. IV/9",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000761",
+        "titel": "DI",
+        "vorname": "Neven",
+        "nachname": "Burazor",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "9800000006196",
+          "version": 2,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "LVR - Leistungsverrechnung",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "14900000008885",
+      "version": 3,
+      "deleted": false,
+      "produktPositionname": "DIAZ",
+      "start": "2018-04-01T00:00:00.000",
+      "ende": "2018-04-01T00:00:00.000",
+      "aktiv": false,
+      "anmerkung": "ZMR-Service; nur Buchungspunkt in Betrieb",
+      "auftraggeber": "IV/2",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "WARTUNG",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [],
+      "stundenplanung": []
+    },
+    {
+      "id": "19000000005856",
+      "version": 3,
+      "deleted": false,
+      "produktPositionname": "Infobrige 2.0_P",
+      "start": "2019-02-01T00:00:00.000",
+      "ende": "2019-12-31T00:00:00.000",
+      "aktiv": true,
+      "auftraggeber": "IV/9",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "15600000002277",
+        "vorname": "Stefan",
+        "nachname": "Biedermann",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "18900000006100",
+          "version": 2,
+          "deleted": false,
+          "aktiv": true,
+          "buchungspunkt": "Infobrige 2.0_P",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    },
+    {
+      "id": "24700000004909",
+      "version": 1,
+      "deleted": false,
+      "produktPositionname": "ZMR_Änderungsdienst_P",
+      "start": "0010-01-01T00:06:32.000",
+      "ende": "2016-12-31T00:00:00.000",
+      "aktiv": false,
+      "anmerkung": "Migration altdaten",
+      "auftraggeber": "III/a",
+      "auftraggeberOrganisation": "IV/2/a",
+      "durchfuehrungsverantwortlicher": {
+        "id": "1500000000291",
+        "titel": "DI",
+        "vorname": "Walter",
+        "nachname": "Hofstetter",
+        "recht": [],
+        "funktion": [],
+        "vertrag": []
+      },
+      "produktPositionTyp": "PROJEKT",
+      "buchungsfreigabe": true,
+      "produktPositionBuchungspunkt": [
+        {
+          "id": "24700000004912",
+          "version": 1,
+          "deleted": false,
+          "aktiv": false,
+          "buchungspunkt": "ZMR_Änderungsdienst_P",
+          "taetigkeitsbuchung": []
+        }
+      ],
+      "stundenplanung": []
+    }
+  ],
+  "stundenplanung": []
+}

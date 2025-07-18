@@ -35,7 +35,7 @@ import { DataoforganizationlistService } from '../dataoforganisation-list.servic
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    MatSnackBarModule, DatePipe
+    MatSnackBarModule
   ],
   templateUrl: './organisation-details.component.html',
   styleUrl: './organisation-details.component.scss',

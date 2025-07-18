@@ -39,7 +39,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  @screen sm {
+ @screen sm {
     width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -85,7 +85,7 @@ body {
     background-color: white;
     overflow: visible;
   }
-  
+
   .no-print {
     display: none !important;
   }

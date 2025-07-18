@@ -15,6 +15,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ViewChild } from '@angular/core';
 import { MatSortModule, MatSort, Sort } from '@angular/material/sort';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-produkte-list',
@@ -50,7 +52,7 @@ export class ProdukteListComponent {
   showInactive = false;
   displayedColumns: string[] = ['kurzName', 'produktname', 'start', 'ende'];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private router: Router) {
     this.http.get<any[]>('produkte.json').subscribe((data) => {
       this.produkte = this.sortData(data);
       this.filterData();
@@ -161,4 +163,12 @@ toggleSort(field: string) {
   addProduct() {
     alert('Added');
   }
+
+  
+ goToDetails(row: any) {
+  this.router.navigate(['/produkte', row.id], {
+    state: { produktData: row }
+  });
+}
+
 }
