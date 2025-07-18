@@ -106,37 +106,36 @@ export class ProdukteDetailsComponent implements OnInit {
     private loadProduktData(id: string, fallbackData: any): void {
     this.loading = true;
 
-    // ملاحظة: نقوم بتحميل كائن واحد <any> لأن ملف التفاصيل يحتوي على منتج واحد فقط
-    // وتأكد من أن اسم الملف ومساره صحيحين
-    this.http.get<any>('produkte_detail.json').subscribe({
+    const detailFileUrl = 'produkte_detail.json'; // تأكد من أن هذا المسار صحيح
+
+    this.http.get<any>(detailFileUrl).subscribe({
       next: (detailData) => {
-        // نتحقق إذا كان المنتج في ملف التفاصيل هو نفسه الذي تم النقر عليه
+        // <-- هذا هو المنطق الجديد الذي طلبته
+        // سنستخدم دائمًا البيانات من الملف الذي تم تحميله طالما أن التحميل ناجح
+
+        // فقط نطبع رسالة في الكونسول للتوضيح
         if (detailData && detailData.id.toString() === id) {
-          // الحالة 1: نجحنا! وجدنا تفاصيل كاملة
-          console.log('Full details found in JSON file.');
-          this.produktData = detailData;
-
-          // إذا كان ملف التفاصيل يحتوي على قائمة produktpositionen
-          if (detailData.produktPosition) {
-            this.produktpositionen = detailData.produktPosition.map((pos: any) => ({
-                name: pos.produktPositionname,
-                start: pos.start ? new Date(pos.start) : undefined,
-                ende: pos.ende ? new Date(pos.ende) : undefined,
-                status: pos.aktiv ? 'active' : 'inactive'
-            }));
-          }
-
+          console.log(`Success: Found matching product with ID ${id} in detail file.`);
         } else {
-          // الحالة 2: فشلنا! سنستخدم البيانات الأساسية كخطة بديلة
-          console.log('Details not found for this ID in JSON, using fallback data.');
-          this.produktData = fallbackData || {};
-          this.produktpositionen = []; // لا توجد تفاصيل للمواقع
+          console.warn(`Warning: Product ID ${id} does not match the one in the detail file. Displaying default product (ID: ${detailData?.id}) as a placeholder.`);
         }
 
-        // في كلتا الحالتين، نملأ الفورم بالبيانات التي حصلنا عليها
+        this.produktData = detailData;
+
+        // معالجة قائمة Produktpositionen
+        if (detailData.produktPosition) {
+          this.produktpositionen = detailData.produktPosition.map((pos: any) => ({
+              name: pos.produktPositionname,
+              start: pos.start ? new Date(pos.start) : undefined,
+              ende: pos.ende ? new Date(pos.ende) : undefined,
+              status: pos.aktiv ? 'active' : 'inactive'
+          }));
+        }
+
+        // ملء الفورم بالبيانات الكاملة من الملف
         this.produktForm.patchValue(this.produktData);
 
-        // معالجة خاصة للحقل المتداخل `ergebnisverantwortlicher` إذا كان موجوداً
+        // معالجة خاصة للحقل المتداخل `ergebnisverantwortlicher`
         if (this.produktData.ergebnisverantwortlicher && typeof this.produktData.ergebnisverantwortlicher === 'object') {
             const verantwortlicherName = `${this.produktData.ergebnisverantwortlicher.vorname || ''} ${this.produktData.ergebnisverantwortlicher.nachname || ''}`.trim();
             this.produktForm.get('ergebnisverantwortlicher')?.patchValue(verantwortlicherName);
@@ -146,8 +145,8 @@ export class ProdukteDetailsComponent implements OnInit {
         this.loading = false;
       },
       error: (err) => {
-        // إذا فشل تحميل الملف نفسه (مثلاً غير موجود)، نستخدم الخطة البديلة
-        console.error('Error loading a-detail.json, using fallback data.', err);
+        // حالة الخطأ: إذا فشل تحميل الملف نفسه (404)، نستخدم الخطة البديلة
+        console.error(`CRITICAL: File not found at '${detailFileUrl}'. Falling back to basic data.`, err);
         this.produktData = fallbackData || {};
         this.produktpositionen = [];
         this.produktForm.patchValue(this.produktData);
